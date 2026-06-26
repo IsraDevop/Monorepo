@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet">
+<meta name="design_doc_mode" content="canvas">
+<style>
+  *{ box-sizing:border-box; }
+  .scr{ width:390px; height:844px; background:#F5F6F8; border-radius:42px; overflow:hidden; position:relative; box-shadow:0 22px 60px rgba(17,20,45,.16); border:1px solid #E7E8EE; display:flex; flex-direction:column; font-family:'Plus Jakarta Sans',sans-serif; }
+  .lbl{ font-family:'Plus Jakarta Sans',sans-serif; font-size:15px; font-weight:700; color:#3A3D46; margin-bottom:14px; letter-spacing:-.01em; display:flex; align-items:center; gap:8px; }
+  .lbl span{ font-family:'JetBrains Mono',monospace; font-weight:700; color:#0E28D6; }
+  .frame{ position:absolute; }
+  .sb{ height:44px; flex:none; display:flex; align-items:center; justify-content:space-between; padding:0 26px 0 30px; font-family:'JetBrains Mono',monospace; font-weight:700; font-size:14px; color:#15161A; }
+  .sb-r{ display:flex; align-items:center; gap:6px; }
+  .body{ flex:1; overflow:hidden; display:flex; flex-direction:column; }
+  .ph{ background-image:repeating-linear-gradient(135deg,#E9EBF1 0 11px,#EFF1F6 11px 22px); display:flex; align-items:center; justify-content:center; font-family:'JetBrains Mono',monospace; font-size:11px; color:#9DA2AE; letter-spacing:.04em; }
+  .tab{ flex:none; height:78px; background:#fff; border-top:1px solid #ECEDF1; display:flex; align-items:flex-start; justify-content:space-around; padding-top:11px; }
+  .ti{ display:flex; flex-direction:column; align-items:center; gap:4px; font-size:10px; font-weight:600; color:#A7ABB6; }
+  .ti.on{ color:#0E28D6; }
+  .pill{ display:inline-flex; align-items:center; gap:6px; border-radius:999px; font-weight:700; }
+  .btnP{ background:#0E28D6; color:#fff; border:none; border-radius:16px; font-family:'Plus Jakarta Sans'; font-weight:800; font-size:16px; height:54px; display:flex; align-items:center; justify-content:center; gap:8px; width:100%; }
+  .field{ height:52px; border:1.5px solid #E4E6EC; border-radius:14px; background:#fff; display:flex; align-items:center; padding:0 16px; font-size:15px; color:#15161A; }
+  .ph-card{ aspect-ratio:1; border-radius:18px; }
+  input{ font-family:inherit; }
+</style>
+</helmet>
+
+<div style="position:absolute; left:0; top:0; padding:40px 60px 80px; font-family:'Plus Jakarta Sans',sans-serif;">
+  <div style="display:flex; align-items:center; gap:18px; margin-bottom:8px;">
+    <img src="assets/yala-logo.png" alt="Yala" style="height:46px;">
+    <div style="width:1px; height:40px; background:#DADCE3;"></div>
+    <div>
+      <div style="font-size:26px; font-weight:800; color:#15161A; letter-spacing:-.02em;">Mockups Mobile — Yala</div>
+      <div style="font-size:14px; color:#777C88; font-weight:500;">Marketplace de subastas de coleccionables · Flujo comprador/vendedor · Expo (iOS + Android)</div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ ROW 1 ============ -->
+
+<!-- 01 LOGIN -->
+<div class="frame" style="left:0; top:180px;">
+  <div class="lbl"><span>01</span> Ingresar</div>
+  <div class="scr">
+    <div class="sb"><div>9:41</div><div class="sb-r"><svg width="17" height="11" viewBox="0 0 17 11"><rect x="0" y="6" width="3" height="5" rx="1" fill="#15161A"/><rect x="4.5" y="4" width="3" height="7" rx="1" fill="#15161A"/><rect x="9" y="2" width="3" height="9" rx="1" fill="#15161A"/><rect x="13.5" y="0" width="3" height="11" rx="1" fill="#15161A"/></svg><svg width="24" height="12" viewBox="0 0 24 12"><rect x="0.5" y="0.5" width="20" height="11" rx="3" fill="none" stroke="#15161A"/><rect x="2" y="2" width="15" height="8" rx="1.5" fill="#15161A"/><rect x="21.5" y="3.5" width="2" height="5" rx="1" fill="#15161A"/></svg></div></div>
+    <div class="body" style="padding:0 26px; justify-content:flex-start;">
+      <div style="display:flex; flex-direction:column; align-items:center; margin-top:40px;">
+        <img src="assets/yala-logo.png" alt="Yala" style="height:38px;">
+        <div style="font-size:14px; color:#8A8F98; font-weight:500; margin-top:14px;">Subastas de coleccionables geek.</div>
+      </div>
+      <div style="background:#fff; border-radius:24px; padding:24px 20px; margin-top:34px; box-shadow:0 8px 30px rgba(17,20,45,.06); border:1px solid #F0F1F4;">
+        <div style="display:flex; gap:22px; border-bottom:1px solid #EEEFF2; margin-bottom:22px;">
+          <div style="padding-bottom:12px; font-weight:800; font-size:15px; color:#0E28D6; border-bottom:2.5px solid #0E28D6;">Ingresar</div>
+          <div style="padding-bottom:12px; font-weight:600; font-size:15px; color:#A2A6B0;">Crear cuenta</div>
+        </div>
+        <div style="font-size:13px; font-weight:700; color:#3A3D46; margin-bottom:8px;">Email</div>
+        <div class="field" style="color:#B4B8C0; margin-bottom:18px;">vos@email.com</div>
+        <div style="font-size:13px; font-weight:700; color:#3A3D46; margin-bottom:8px;">Contraseña</div>
+        <div class="field" style="color:#B4B8C0; margin-bottom:24px; letter-spacing:3px;">••••••••</div>
+        <button class="btnP">Ingresar</button>
+        <div style="text-align:center; font-size:13px; color:#8A8F98; margin-top:18px;">¿No tenés cuenta? <span style="color:#0E28D6; font-weight:700;">Creá una</span></div>
+      </div>
+      <div style="text-align:center; font-size:11px; color:#B4B8C0; margin-top:18px; font-family:'JetBrains Mono';">POST /api/v1/auth/login</div>
+    </div>
+  </div>
+</div>
+
+<!-- 02 REGISTER -->
+<div class="frame" style="left:470px; top:180px;">
+  <div class="lbl"><span>02</span> Crear cuenta</div>
+  <div class="scr">
+    <div class="sb"><div>9:41</div><div class="sb-r"><svg width="17" height="11" viewBox="0 0 17 11"><rect x="0" y="6" width="3" height="5" rx="1" fill="#15161A"/><rect x="4.5" y="4" width="3" height="7" rx="1" fill="#15161A"/><rect x="9" y="2" width="3" height="9" rx="1" fill="#15161A"/><rect x="13.5" y="0" width="3" height="11" rx="1" fill="#15161A"/></svg><svg width="24" height="12" viewBox="0 0 24 12"><rect x="0.5" y="0.5" width="20" height="11" rx="3" fill="none" stroke="#15161A"/><rect x="2" y="2" width="15" height="8" rx="1.5" fill="#15161A"/><rect x="21.5" y="3.5" width="2" height="5" rx="1" fill="#15161A"/></svg></div></div>
+    <div class="body" style="padding:0 26px;">
+      <div style="display:flex; flex-direction:column; align-items:center; margin-top:30px;">
+        <img src="assets/yala-logo.png" alt="Yala" style="height:34px;">
+        <div style="font-size:14px; color:#8A8F98; font-weight:500; margin-top:12px;">Creá tu cuenta en segundos.</div>
+      </div>
+      <div style="background:#fff; border-radius:24px; padding:22px 20px; margin-top:24px; box-shadow:0 8px 30px rgba(17,20,45,.06); border:1px solid #F0F1F4;">
+        <div style="display:flex; gap:22px; border-bottom:1px solid #EEEFF2; margin-bottom:20px;">
+          <div style="padding-bottom:12px; font-weight:600; font-size:15px; color:#A2A6B0;">Ingresar</div>
+          <div style="padding-bottom:12px; font-weight:800; font-size:15px; color:#0E28D6; border-bottom:2.5px solid #0E28D6;">Crear cuenta</div>
+        </div>
+        <div style="font-size:13px; font-weight:700; color:#3A3D46; margin-bottom:7px;">Nombre</div>
+        <div class="field" style="color:#B4B8C0; margin-bottom:14px;">Ana Torres</div>
+        <div style="font-size:13px; font-weight:700; color:#3A3D46; margin-bottom:7px;">Email</div>
+        <div class="field" style="color:#B4B8C0; margin-bottom:14px;">vos@email.com</div>
+        <div style="font-size:13px; font-weight:700; color:#3A3D46; margin-bottom:7px;">Contraseña</div>
+        <div class="field" style="color:#B4B8C0; margin-bottom:14px; letter-spacing:3px;">••••••••</div>
+        <div style="font-size:13px; font-weight:700; color:#3A3D46; margin-bottom:9px;">Quiero</div>
+        <div style="display:flex; gap:10px; margin-bottom:22px;">
+          <div style="flex:1; height:46px; border-radius:13px; border:1.5px solid #0E28D6; background:#EEF0FE; color:#0E28D6; font-weight:800; font-size:13px; display:flex; align-items:center; justify-content:center;">Comprar</div>
+          <div style="flex:1; height:46px; border-radius:13px; border:1.5px solid #E4E6EC; color:#7C808B; font-weight:700; font-size:13px; display:flex; align-items:center; justify-content:center;">Vender</div>
+        </div>
+        <button class="btnP">Crear cuenta</button>
+      </div>
+      <div style="text-align:center; font-size:11px; color:#B4B8C0; margin-top:14px; font-family:'JetBrains Mono';">POST /api/v1/auth/register</div>
+    </div>
+  </div>
+</div>
+
+<!-- 03 MARKETPLACE -->
+<div class="frame" style="left:940px; top:180px;">
+  <div class="lbl"><span>03</span> Marketplace · Subastas</div>
+  <div class="scr">
+    <div class="sb"><div>9:41</div><div class="sb-r"><svg width="17" height="11" viewBox="0 0 17 11"><rect x="0" y="6" width="3" height="5" rx="1" fill="#15161A"/><rect x="4.5" y="4" width="3" height="7" rx="1" fill="#15161A"/><rect x="9" y="2" width="3" height="9" rx="1" fill="#15161A"/><rect x="13.5" y="0" width="3" height="11" rx="1" fill="#15161A"/></svg><svg width="24" height="12" viewBox="0 0 24 12"><rect x="0.5" y="0.5" width="20" height="11" rx="3" fill="none" stroke="#15161A"/><rect x="2" y="2" width="15" height="8" rx="1.5" fill="#15161A"/><rect x="21.5" y="3.5" width="2" height="5" rx="1" fill="#15161A"/></svg></div></div>
+    <div class="body">
+      <div style="padding:6px 20px 12px; background:#fff;">
+        <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:14px;">
+          <img src="assets/yala-logo.png" alt="Yala" style="height:24px;">
+          <div style="display:flex; align-items:center; gap:14px;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3A3D46" stroke-width="2"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>
+            <div style="width:30px; height:30px; border-radius:50%; background:#EDEBFF; color:#0E28D6; font-weight:800; font-size:13px; display:flex; align-items:center; justify-content:center;">I</div>
+          </div>
+        </div>
+        <div style="height:46px; background:#F1F2F5; border-radius:14px; display:flex; align-items:center; gap:10px; padding:0 14px; color:#9499A3; font-size:14px; margin-bottom:14px;">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#9499A3" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+          Buscar Charizard, Funko, comics…
+        </div>
+        <div style="display:flex; gap:9px;">
+          <div class="pill" style="background:#0E28D6; color:#fff; padding:8px 16px; font-size:13px;">Todo</div>
+          <div class="pill" style="background:#F1F2F5; color:#5A5F6A; padding:8px 16px; font-size:13px;">Pokémon TCG</div>
+          <div class="pill" style="background:#F1F2F5; color:#5A5F6A; padding:8px 16px; font-size:13px;">Funko Pop</div>
+        </div>
+      </div>
+      <div style="flex:1; overflow:hidden; padding:16px 20px 0;">
+        <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:14px;">
+          <div style="display:flex; align-items:center; gap:8px;"><div style="width:8px; height:8px; border-radius:50%; background:#F2622E;"></div><div style="font-weight:800; font-size:16px; color:#15161A;">Subastas en vivo</div></div>
+          <div style="font-family:'JetBrains Mono'; font-size:11px; color:#9499A3;">1 activa</div>
+        </div>
+        <div style="background:#fff; border-radius:20px; overflow:hidden; box-shadow:0 6px 22px rgba(17,20,45,.07); border:1px solid #F0F1F4;">
+          <div class="ph" style="height:170px; background:#15161A; position:relative; color:#3A3D46; font-size:34px; font-weight:800; font-family:'Plus Jakarta Sans';">Yala
+            <div class="pill" style="position:absolute; top:12px; left:12px; background:#fff; color:#F2622E; padding:5px 11px; font-size:11px;"><div style="width:6px;height:6px;border-radius:50%;background:#F2622E;"></div>En vivo</div>
+            <div style="position:absolute; bottom:12px; right:12px; display:flex; gap:5px; font-family:'JetBrains Mono'; font-weight:800;"><div style="background:rgba(255,255,255,.12); color:#fff; border-radius:7px; padding:4px 7px; font-size:13px; text-align:center;">21<div style="font-size:7px; color:#9DA2AE;">DÍAS</div></div><div style="background:rgba(255,255,255,.12); color:#fff; border-radius:7px; padding:4px 7px; font-size:13px; text-align:center;">11<div style="font-size:7px; color:#9DA2AE;">HRS</div></div><div style="background:rgba(255,255,255,.12); color:#fff; border-radius:7px; padding:4px 7px; font-size:13px; text-align:center;">50<div style="font-size:7px; color:#9DA2AE;">MIN</div></div></div>
+          </div>
+          <div style="padding:14px 16px 16px;">
+            <div style="font-weight:700; font-size:15px; color:#15161A; line-height:1.25;">Charizard Base Set Holo 1ª edición</div>
+            <div style="font-family:'JetBrains Mono'; font-size:10px; font-weight:700; color:#F2622E; margin-top:12px; letter-spacing:.05em;">PUJA ACTUAL</div>
+            <div style="display:flex; align-items:baseline; justify-content:space-between; margin-top:2px;">
+              <div style="font-family:'JetBrains Mono'; font-weight:800; font-size:26px; color:#F2622E;">S/. 150.00</div>
+              <div style="font-family:'JetBrains Mono'; font-size:12px; color:#9499A3;">0 pujas</div>
+            </div>
+            <div style="display:flex; align-items:center; gap:8px; margin-top:14px; padding-top:12px; border-top:1px solid #F2F3F6;">
+              <div style="width:24px; height:24px; border-radius:50%; background:#EDEBFF; color:#0E28D6; font-weight:800; font-size:10px; display:flex; align-items:center; justify-content:center;">DA</div>
+              <div style="font-size:12px; color:#5A5F6A; font-weight:600;">Demo Admin</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tab">
+      <div class="ti on"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0E28D6" stroke-width="2"><path d="m3 10 9-7 9 7v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Inicio</div>
+      <div class="ti"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#A7ABB6" stroke-width="2"><path d="m14 13-7.5 7.5a2.1 2.1 0 0 1-3-3L11 10"/><path d="m16 16 6-6"/><path d="m8 8 6-6"/><path d="m9 7 8 8"/></svg>Subastas</div>
+      <div class="ti"><div style="width:34px;height:34px;border-radius:12px;background:#0E28D6;display:flex;align-items:center;justify-content:center;margin-top:-4px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></div></div>
+      <div class="ti"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#A7ABB6" stroke-width="2"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>Avisos</div>
+      <div class="ti"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#A7ABB6" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>Perfil</div>
+    </div>
+  </div>
+</div>
+
+<!-- 04 LISTING DETAIL (FIXED) -->
+<div class="frame" style="left:1410px; top:180px;">
+  <div class="lbl"><span>04</span> Detalle de publicación</div>
+  <div class="scr">
+    <div class="sb"><div>9:41</div><div class="sb-r"><svg width="17" height="11" viewBox="0 0 17 11"><rect x="0" y="6" width="3" height="5" rx="1" fill="#15161A"/><rect x="4.5" y="4" width="3" height="7" rx="1" fill="#15161A"/><rect x="9" y="2" width="3" height="9" rx="1" fill="#15161A"/><rect x="13.5" y="0" width="3" height="11" rx="1" fill="#15161A"/></svg><svg width="24" height="12" viewBox="0 0 24 12"><rect x="0.5" y="0.5" width="20" height="11" rx="3" fill="none" stroke="#15161A"/><rect x="2" y="2" width="15" height="8" rx="1.5" fill="#15161A"/><rect x="21.5" y="3.5" width="2" height="5" rx="1" fill="#15161A"/></svg></div></div>
+    <div class="body">
+      <div style="display:flex; align-items:center; justify-content:space-between; padding:8px 18px;">
+        <div style="display:flex; align-items:center; gap:8px; color:#3A3D46; font-weight:700; font-size:14px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3A3D46" stroke-width="2.2"><path d="m15 18-6-6 6-6"/></svg>Volver</div>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3A3D46" stroke-width="2"><path d="M19 14c1.5-1.5 3-3.2 3-5.5A5.5 5.5 0 0 0 12 5 5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4 3 5.5l7 7Z"/></svg>
+      </div>
+      <div style="flex:1; overflow:hidden;">
+        <div class="ph" style="height:300px; margin:4px 18px 0; border-radius:22px;">imagen del producto</div>
+        <div style="display:flex; gap:7px; padding:10px 18px 0;">
+          <div style="width:46px;height:46px;border-radius:11px;border:2px solid #0E28D6;" class="ph"></div>
+          <div style="width:46px;height:46px;border-radius:11px;" class="ph"></div>
+          <div style="width:46px;height:46px;border-radius:11px;" class="ph"></div>
+        </div>
+        <div style="padding:16px 18px 0;">
+          <div style="font-family:'JetBrains Mono'; font-size:10px; font-weight:700; color:#0E28D6; letter-spacing:.06em;">POKÉMON TCG · PSA 9 MINT</div>
+          <div style="font-weight:800; font-size:21px; color:#15161A; line-height:1.2; margin-top:6px;">Charizard Base Set Holo 1ª edición</div>
+          <div style="font-family:'JetBrains Mono'; font-weight:800; font-size:28px; color:#15161A; margin-top:12px;">S/. 499.90</div>
+          <div style="font-size:13px; color:#7C808B; margin-top:10px; line-height:1.5;">Carta certificada por PSA con grado 9. Sin marcas ni dobleces, en excelente estado.</div>
+          <div style="display:flex; align-items:center; gap:10px; margin-top:16px; padding:12px; background:#fff; border-radius:16px; border:1px solid #F0F1F4;">
+            <div style="width:38px; height:38px; border-radius:50%; background:#EDEBFF; color:#0E28D6; font-weight:800; font-size:14px; display:flex; align-items:center; justify-content:center;">DA</div>
+            <div style="flex:1;"><div style="font-weight:700; font-size:14px; color:#15161A;">Demo Admin</div><div style="font-family:'JetBrains Mono'; font-size:11px; color:#F4A623;">★★★★★ 4.9</div></div>
+            <div style="font-size:12px; font-weight:700; color:#0E28D6;">Ver perfil ›</div>
+          </div>
+        </div>
+      </div>
+      <div style="flex:none; padding:14px 18px; background:#fff; border-top:1px solid #F0F1F4; display:flex; gap:12px;">
+        <button class="btnP" style="background:#EEF0FE; color:#0E28D6; width:54px; flex:none;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0E28D6" stroke-width="2"><circle cx="9" cy="21" r="1.5"/><circle cx="18" cy="21" r="1.5"/><path d="M2 3h3l2.6 13h11l1.8-9H6"/></svg></button>
+        <button class="btnP">Comprar ahora</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ ROW 2 ============ -->
+
+<!-- 05 AUCTION DETAIL + BID -->
+<div class="frame" style="left:0; top:1150px;">
+  <div class="lbl"><span>05</span> Subasta · Pujar</div>
+  <div class="scr">
+    <div class="sb"><div>9:41</div><div class="sb-r"><svg width="17" height="11" viewBox="0 0 17 11"><rect x="0" y="6" width="3" height="5" rx="1" fill="#15161A"/><rect x="4.5" y="4" width="3" height="7" rx="1" fill="#15161A"/><rect x="9" y="2" width="3" height="9" rx="1" fill="#15161A"/><rect x="13.5" y="0" width="3" height="11" rx="1" fill="#15161A"/></svg><svg width="24" height="12" viewBox="0 0 24 12"><rect x="0.5" y="0.5" width="20" height="11" rx="3" fill="none" stroke="#15161A"/><rect x="2" y="2" width="15" height="8" rx="1.5" fill="#15161A"/><rect x="21.5" y="3.5" width="2" height="5" rx="1" fill="#15161A"/></svg></div></div>
+    <div class="body">
+      <div style="display:flex; align-items:center; justify-content:space-between; padding:8px 18px;">
+        <div style="display:flex; align-items:center; gap:8px; color:#3A3D46; font-weight:700; font-size:14px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3A3D46" stroke-width="2.2"><path d="m15 18-6-6 6-6"/></svg>Volver</div>
+      </div>
+      <div style="flex:1; overflow:hidden;">
+        <div class="ph" style="height:200px; margin:0 18px; border-radius:22px; background:#15161A; color:#3A3D46; font-size:30px; font-weight:800; font-family:'Plus Jakarta Sans'; position:relative;">Yala
+          <div class="pill" style="position:absolute; top:12px; left:12px; background:#fff; color:#F2622E; padding:5px 11px; font-size:11px;"><div style="width:6px;height:6px;border-radius:50%;background:#F2622E;"></div>En vivo</div>
+        </div>
+        <div style="padding:14px 18px 0;">
+          <div style="font-family:'JetBrains Mono'; font-size:10px; font-weight:700; color:#0E28D6; letter-spacing:.06em;">POKÉMON TCG · PSA 9 MINT</div>
+          <div style="font-weight:800; font-size:19px; color:#15161A; line-height:1.2; margin-top:5px;">Charizard Base Set Holo 1ª edición</div>
+        </div>
+        <div style="margin:14px 18px 0; background:#FFF4EF; border:1px solid #FCDED1; border-radius:20px; padding:16px;">
+          <div style="display:flex; align-items:center; justify-content:space-between;">
+            <div class="pill" style="color:#F2622E; font-size:11px; font-family:'JetBrains Mono';"><div style="width:7px;height:7px;border-radius:50%;background:#F2622E;"></div>PUJA ACTUAL</div>
+            <div style="font-family:'JetBrains Mono'; font-size:11px; color:#B86A4B; font-weight:700;">⏱ CIERRA EN</div>
+          </div>
+          <div style="display:flex; align-items:flex-end; justify-content:space-between; margin-top:6px;">
+            <div style="font-family:'JetBrains Mono'; font-weight:800; font-size:28px; color:#F2622E;">S/. 150.00</div>
+            <div style="display:flex; gap:5px; font-family:'JetBrains Mono'; font-weight:800;"><div style="background:#fff; border-radius:7px; padding:4px 7px; font-size:14px; color:#15161A; text-align:center;">11<div style="font-size:7px;color:#B0859B;">HRS</div></div><div style="background:#fff; border-radius:7px; padding:4px 7px; font-size:14px; color:#15161A; text-align:center;">45<div style="font-size:7px;color:#B0859B;">MIN</div></div><div style="background:#fff; border-radius:7px; padding:4px 7px; font-size:14px; color:#15161A; text-align:center;">51<div style="font-size:7px;color:#B0859B;">SEG</div></div></div>
+          </div>
+          <div style="font-family:'JetBrains Mono'; font-size:11px; color:#B86A4B; margin-top:8px;">1 puja · incremento sugerido S/. 2 (1%)</div>
+        </div>
+        <div style="padding:14px 18px 0;">
+          <div style="font-weight:700; font-size:13px; color:#15161A; margin-bottom:8px;">Historial de pujas <span style="font-weight:600; color:#9499A3; font-family:'JetBrains Mono'; font-size:10px;">· en tiempo real</span></div>
+          <div style="display:flex; align-items:center; justify-content:space-between; padding:8px 0; border-bottom:1px solid #F2F3F6;">
+            <div style="display:flex; align-items:center; gap:8px;"><div style="width:24px;height:24px;border-radius:50%;background:#EDEBFF;color:#0E28D6;font-weight:800;font-size:10px;display:flex;align-items:center;justify-content:center;">DA</div><span style="font-size:13px;color:#5A5F6A;font-weight:600;">Demo Admin</span></div>
+            <span style="font-family:'JetBrains Mono'; font-weight:700; font-size:13px; color:#15161A;">S/. 150.00</span>
+          </div>
+        </div>
+      </div>
+      <div style="flex:none; padding:12px 18px; background:#fff; border-top:1px solid #F0F1F4; display:flex; gap:10px; align-items:center;">
+        <div class="field" style="flex:1; font-family:'JetBrains Mono'; font-weight:700; color:#15161A;">S/. 152</div>
+        <button class="btnP" style="width:auto; padding:0 22px; background:#F2622E;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2"><path d="m14 13-7.5 7.5a2.1 2.1 0 0 1-3-3L11 10"/><path d="m16 16 6-6"/><path d="m9 7 8 8"/></svg>Pujar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 06 NOTIFICATIONS -->
+<div class="frame" style="left:470px; top:1150px;">
+  <div class="lbl"><span>06</span> Notificaciones</div>
+  <div class="scr">
+    <div class="sb"><div>9:41</div><div class="sb-r"><svg width="17" height="11" viewBox="0 0 17 11"><rect x="0" y="6" width="3" height="5" rx="1" fill="#15161A"/><rect x="4.5" y="4" width="3" height="7" rx="1" fill="#15161A"/><rect x="9" y="2" width="3" height="9" rx="1" fill="#15161A"/><rect x="13.5" y="0" width="3" height="11" rx="1" fill="#15161A"/></svg><svg width="24" height="12" viewBox="0 0 24 12"><rect x="0.5" y="0.5" width="20" height="11" rx="3" fill="none" stroke="#15161A"/><rect x="2" y="2" width="15" height="8" rx="1.5" fill="#15161A"/><rect x="21.5" y="3.5" width="2" height="5" rx="1" fill="#15161A"/></svg></div></div>
+    <div class="body">
+      <div style="padding:8px 20px 14px; background:#fff; display:flex; align-items:center; justify-content:space-between;">
+        <div style="font-weight:800; font-size:20px; color:#15161A;">Notificaciones</div>
+        <div style="font-size:12px; font-weight:700; color:#0E28D6;">Marcar todas</div>
+      </div>
+      <div style="flex:1; overflow:hidden; padding:14px 18px 0; display:flex; flex-direction:column; gap:10px;">
+        <div style="background:#EEF0FE; border:1px solid #DCE0FC; border-radius:16px; padding:14px; display:flex; gap:12px;">
+          <div style="width:38px;height:38px;border-radius:11px;background:#F2622E;display:flex;align-items:center;justify-content:center;flex:none;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2"><path d="m14 13-7.5 7.5a2.1 2.1 0 0 1-3-3L11 10"/><path d="m16 16 6-6"/></svg></div>
+          <div style="flex:1;"><div style="font-size:13px; color:#15161A; font-weight:600; line-height:1.4;">Tu puja fue superada en la subasta de <b>Charizard PSA 9</b>.</div><div style="font-family:'JetBrains Mono'; font-size:10px; color:#9499A3; margin-top:4px;">hace 2 min · BID_OUTBID</div></div>
+          <div style="width:8px;height:8px;border-radius:50%;background:#0E28D6;flex:none;margin-top:4px;"></div>
+        </div>
+        <div style="background:#fff; border:1px solid #F0F1F4; border-radius:16px; padding:14px; display:flex; gap:12px;">
+          <div style="width:38px;height:38px;border-radius:11px;background:#1B9E5A;display:flex;align-items:center;justify-content:center;flex:none;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></div>
+          <div style="flex:1;"><div style="font-size:13px; color:#15161A; font-weight:600; line-height:1.4;">¡Ganaste la subasta de <b>Pikachu Illustrator</b>! Completá tu compra.</div><div style="font-family:'JetBrains Mono'; font-size:10px; color:#9499A3; margin-top:4px;">hace 1 h · AUCTION_WON</div></div>
+        </div>
+        <div style="background:#fff; border:1px solid #F0F1F4; border-radius:16px; padding:14px; display:flex; gap:12px;">
+          <div style="width:38px;height:38px;border-radius:11px;background:#0E28D6;display:flex;align-items:center;justify-content:center;flex:none;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2"><path d="M20 6 9 17l-5-5"/></svg></div>
+          <div style="flex:1;"><div style="font-size:13px; color:#5A5F6A; font-weight:500; line-height:1.4;">Tu venta de <b>Funko Batman</b> fue confirmada.</div><div style="font-family:'JetBrains Mono'; font-size:10px; color:#9499A3; margin-top:4px;">ayer · SALE_CONFIRMED</div></div>
+        </div>
+        <div style="background:#fff; border:1px solid #F0F1F4; border-radius:16px; padding:14px; display:flex; gap:12px;">
+          <div style="width:38px;height:38px;border-radius:11px;background:#F2622E;display:flex;align-items:center;justify-content:center;flex:none;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2"><path d="m14 13-7.5 7.5a2.1 2.1 0 0 1-3-3L11 10"/><path d="m16 16 6-6"/></svg></div>
+          <div style="flex:1;"><div style="font-size:13px; color:#5A5F6A; font-weight:500; line-height:1.4;">Nueva puja en tu subasta de <b>Mewtwo Holo</b>.</div><div style="font-family:'JetBrains Mono'; font-size:10px; color:#9499A3; margin-top:4px;">ayer · NEW_BID</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="tab">
+      <div class="ti"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#A7ABB6" stroke-width="2"><path d="m3 10 9-7 9 7v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Inicio</div>
+      <div class="ti"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#A7ABB6" stroke-width="2"><path d="m14 13-7.5 7.5a2.1 2.1 0 0 1-3-3L11 10"/><path d="m16 16 6-6"/><path d="m8 8 6-6"/><path d="m9 7 8 8"/></svg>Subastas</div>
+      <div class="ti"><div style="width:34px;height:34px;border-radius:12px;background:#0E28D6;display:flex;align-items:center;justify-content:center;margin-top:-4px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></div></div>
+      <div class="ti on" style="position:relative;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0E28D6" stroke-width="2"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg><div style="position:absolute;top:-2px;right:24px;width:8px;height:8px;border-radius:50%;background:#F2622E;"></div>Avisos</div>
+      <div class="ti"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#A7ABB6" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>Perfil</div>
+    </div>
+  </div>
+</div>
+
+<!-- 07 CHECKOUT / ORDER DETAIL -->
+<div class="frame" style="left:940px; top:1150px;">
+  <div class="lbl"><span>07</span> Orden · Pago</div>
+  <div class="scr">
+    <div class="sb"><div>9:41</div><div class="sb-r"><svg width="17" height="11" viewBox="0 0 17 11"><rect x="0" y="6" width="3" height="5" rx="1" fill="#15161A"/><rect x="4.5" y="4" width="3" height="7" rx="1" fill="#15161A"/><rect x="9" y="2" width="3" height="9" rx="1" fill="#15161A"/><rect x="13.5" y="0" width="3" height="11" rx="1" fill="#15161A"/></svg><svg width="24" height="12" viewBox="0 0 24 12"><rect x="0.5" y="0.5" width="20" height="11" rx="3" fill="none" stroke="#15161A"/><rect x="2" y="2" width="15" height="8" rx="1.5" fill="#15161A"/><rect x="21.5" y="3.5" width="2" height="5" rx="1" fill="#15161A"/></svg></div></div>
+    <div class="body">
+      <div style="display:flex; align-items:center; gap:8px; padding:8px 18px; color:#3A3D46; font-weight:700; font-size:14px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3A3D46" stroke-width="2.2"><path d="m15 18-6-6 6-6"/></svg>Orden #7001</div>
+      <div style="flex:1; overflow:hidden; padding:8px 18px 0;">
+        <div style="display:flex; justify-content:center; margin:6px 0 18px;"><div class="pill" style="background:#FFF6E8; color:#C7891A; padding:8px 18px; font-size:13px; font-family:'JetBrains Mono';"><div style="width:7px;height:7px;border-radius:50%;background:#E0A21E;"></div>PENDIENTE DE PAGO</div></div>
+        <div style="background:#fff; border:1px solid #F0F1F4; border-radius:18px; padding:14px; display:flex; gap:12px; align-items:center;">
+          <div class="ph" style="width:64px;height:64px;border-radius:14px;flex:none;">img</div>
+          <div style="flex:1;"><div style="font-weight:700; font-size:14px; color:#15161A; line-height:1.25;">Charizard Base Set Holo 1ª edición</div><div style="font-size:11px; color:#9499A3; margin-top:3px;">Vendedor · Demo Admin</div></div>
+        </div>
+        <div style="background:#fff; border:1px solid #F0F1F4; border-radius:18px; padding:16px; margin-top:12px;">
+          <div style="display:flex; justify-content:space-between; font-size:13px; color:#7C808B; margin-bottom:10px;"><span>Subtotal</span><span style="font-family:'JetBrains Mono'; color:#15161A;">S/. 499.90</span></div>
+          <div style="display:flex; justify-content:space-between; font-size:13px; color:#7C808B; margin-bottom:12px;"><span>Comisión Yala</span><span style="font-family:'JetBrains Mono'; color:#15161A;">S/. 0.00</span></div>
+          <div style="display:flex; justify-content:space-between; align-items:center; padding-top:12px; border-top:1px solid #F2F3F6;"><span style="font-weight:800; font-size:15px; color:#15161A;">Total</span><span style="font-family:'JetBrains Mono'; font-weight:800; font-size:20px; color:#15161A;">S/. 499.90</span></div>
+        </div>
+        <div style="display:flex; align-items:center; gap:10px; margin-top:14px; padding:14px; background:#fff; border:1px solid #F0F1F4; border-radius:16px;">
+          <div style="width:40px;height:28px;border-radius:6px;background:#00B1EA;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:9px;font-family:'JetBrains Mono';">MP</div>
+          <div style="flex:1; font-size:13px; font-weight:700; color:#15161A;">Mercado Pago</div>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0E28D6" stroke-width="2.5"><circle cx="12" cy="12" r="9"/><path d="m8 12 2.5 2.5L16 9"/></svg>
+        </div>
+      </div>
+      <div style="flex:none; padding:14px 18px; background:#fff; border-top:1px solid #F0F1F4;">
+        <button class="btnP">Pagar con Mercado Pago</button>
+        <div style="text-align:center; font-size:13px; font-weight:700; color:#C8413A; margin-top:12px;">Cancelar orden</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 08 MY ORDERS -->
+<div class="frame" style="left:1410px; top:1150px;">
+  <div class="lbl"><span>08</span> Mis órdenes</div>
+  <div class="scr">
+    <div class="sb"><div>9:41</div><div class="sb-r"><svg width="17" height="11" viewBox="0 0 17 11"><rect x="0" y="6" width="3" height="5" rx="1" fill="#15161A"/><rect x="4.5" y="4" width="3" height="7" rx="1" fill="#15161A"/><rect x="9" y="2" width="3" height="9" rx="1" fill="#15161A"/><rect x="13.5" y="0" width="3" height="11" rx="1" fill="#15161A"/></svg><svg width="24" height="12" viewBox="0 0 24 12"><rect x="0.5" y="0.5" width="20" height="11" rx="3" fill="none" stroke="#15161A"/><rect x="2" y="2" width="15" height="8" rx="1.5" fill="#15161A"/><rect x="21.5" y="3.5" width="2" height="5" rx="1" fill="#15161A"/></svg></div></div>
+    <div class="body">
+      <div style="padding:8px 20px 12px; background:#fff;"><div style="font-weight:800; font-size:20px; color:#15161A;">Mis órdenes</div></div>
+      <div style="padding:12px 18px 4px; display:flex; gap:8px;">
+        <div class="pill" style="background:#0E28D6; color:#fff; padding:7px 14px; font-size:12px;">Todas</div>
+        <div class="pill" style="background:#F1F2F5; color:#5A5F6A; padding:7px 14px; font-size:12px;">Pendientes</div>
+        <div class="pill" style="background:#F1F2F5; color:#5A5F6A; padding:7px 14px; font-size:12px;">Confirmadas</div>
+      </div>
+      <div style="flex:1; overflow:hidden; padding:8px 18px 0; display:flex; flex-direction:column; gap:11px;">
+        <div style="background:#fff; border:1px solid #F0F1F4; border-radius:18px; padding:13px; display:flex; gap:12px; align-items:center;">
+          <div class="ph" style="width:58px;height:58px;border-radius:13px;flex:none;">img</div>
+          <div style="flex:1;"><div style="font-weight:700; font-size:14px; color:#15161A; line-height:1.2;">Charizard Base Set Holo</div><div style="font-family:'JetBrains Mono'; font-size:14px; font-weight:800; color:#15161A; margin-top:4px;">S/. 499.90</div></div>
+          <div class="pill" style="background:#FFF6E8; color:#C7891A; padding:5px 10px; font-size:10px; font-family:'JetBrains Mono';">PENDING</div>
+        </div>
+        <div style="background:#fff; border:1px solid #F0F1F4; border-radius:18px; padding:13px; display:flex; gap:12px; align-items:center;">
+          <div class="ph" style="width:58px;height:58px;border-radius:13px;flex:none;">img</div>
+          <div style="flex:1;"><div style="font-weight:700; font-size:14px; color:#15161A; line-height:1.2;">Funko Pop Batman #01</div><div style="font-family:'JetBrains Mono'; font-size:14px; font-weight:800; color:#15161A; margin-top:4px;">S/. 89.00</div></div>
+          <div class="pill" style="background:#E9F7EF; color:#1B9E5A; padding:5px 10px; font-size:10px; font-family:'JetBrains Mono';">CONFIRMED</div>
+        </div>
+        <div style="background:#fff; border:1px solid #F0F1F4; border-radius:18px; padding:13px; display:flex; gap:12px; align-items:center; opacity:.7;">
+          <div class="ph" style="width:58px;height:58px;border-radius:13px;flex:none;">img</div>
+          <div style="flex:1;"><div style="font-weight:700; font-size:14px; color:#15161A; line-height:1.2;">Pikachu VMAX Rainbow</div><div style="font-family:'JetBrains Mono'; font-size:14px; font-weight:800; color:#15161A; margin-top:4px;">S/. 210.00</div></div>
+          <div class="pill" style="background:#F2F3F6; color:#8A8F98; padding:5px 10px; font-size:10px; font-family:'JetBrains Mono';">CANCELLED</div>
+        </div>
+      </div>
+    </div>
+    <div class="tab">
+      <div class="ti"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#A7ABB6" stroke-width="2"><path d="m3 10 9-7 9 7v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Inicio</div>
+      <div class="ti"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#A7ABB6" stroke-width="2"><path d="m14 13-7.5 7.5a2.1 2.1 0 0 1-3-3L11 10"/><path d="m16 16 6-6"/><path d="m8 8 6-6"/><path d="m9 7 8 8"/></svg>Subastas</div>
+      <div class="ti"><div style="width:34px;height:34px;border-radius:12px;background:#0E28D6;display:flex;align-items:center;justify-content:center;margin-top:-4px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></div></div>
+      <div class="ti"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#A7ABB6" stroke-width="2"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>Avisos</div>
+      <div class="ti on"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0E28D6" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>Perfil</div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ ROW 3 ============ -->
+
+<!-- 09 PROFILE -->
+<div class="frame" style="left:0; top:2120px;">
+  <div class="lbl"><span>09</span> Perfil de usuario</div>
+  <div class="scr">
+    <div class="sb"><div>9:41</div><div class="sb-r"><svg width="17" height="11" viewBox="0 0 17 11"><rect x="0" y="6" width="3" height="5" rx="1" fill="#15161A"/><rect x="4.5" y="4" width="3" height="7" rx="1" fill="#15161A"/><rect x="9" y="2" width="3" height="9" rx="1" fill="#15161A"/><rect x="13.5" y="0" width="3" height="11" rx="1" fill="#15161A"/></svg><svg width="24" height="12" viewBox="0 0 24 12"><rect x="0.5" y="0.5" width="20" height="11" rx="3" fill="none" stroke="#15161A"/><rect x="2" y="2" width="15" height="8" rx="1.5" fill="#15161A"/><rect x="21.5" y="3.5" width="2" height="5" rx="1" fill="#15161A"/></svg></div></div>
+    <div class="body">
+      <div style="background:#0E28D6; padding:18px 20px 26px; color:#fff;">
+        <div style="display:flex; justify-content:flex-end; gap:14px; margin-bottom:8px;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M12.2 3a2 2 0 0 1 2 1.7l.2 1a7.6 7.6 0 0 1 2 1.2l1-.4a2 2 0 0 1 2.5.9l.8 1.4a2 2 0 0 1-.5 2.5l-.8.6a7.6 7.6 0 0 1 0 2.4l.8.6a2 2 0 0 1 .5 2.5l-.8 1.4a2 2 0 0 1-2.5.9l-1-.4a7.6 7.6 0 0 1-2 1.2l-.2 1a2 2 0 0 1-2 1.7h-1.6a2 2 0 0 1-2-1.7l-.2-1a7.6 7.6 0 0 1-2-1.2l-1 .4a2 2 0 0 1-2.5-.9l-.8-1.4a2 2 0 0 1 .5-2.5l.8-.6a7.6 7.6 0 0 1 0-2.4l-.8-.6a2 2 0 0 1-.5-2.5l.8-1.4a2 2 0 0 1 2.5-.9l1 .4a7.6 7.6 0 0 1 2-1.2l.2-1a2 2 0 0 1 2-1.7Z"/><circle cx="12" cy="12" r="3"/></svg></div>
+        <div style="display:flex; align-items:center; gap:14px;">
+          <div style="width:62px; height:62px; border-radius:50%; background:#fff; color:#0E28D6; font-weight:800; font-size:26px; display:flex; align-items:center; justify-content:center;">I</div>
+          <div><div style="font-weight:800; font-size:21px;">Israel</div><div style="font-size:12px; opacity:.8;">Usuario en Yala</div><div style="font-family:'JetBrains Mono'; font-size:12px; margin-top:3px; color:#FFD9A0;">★★★★★ 0.0 (0)</div></div>
+        </div>
+      </div>
+      <div style="padding:0 18px; margin-top:-16px;">
+        <div style="background:#fff; border-radius:18px; padding:14px; display:flex; box-shadow:0 6px 20px rgba(17,20,45,.07);">
+          <div style="flex:1; text-align:center; border-right:1px solid #F2F3F6;"><div style="font-family:'JetBrains Mono'; font-weight:800; font-size:18px; color:#15161A;">0.0</div><div style="font-size:11px; color:#9499A3;">Reputación</div></div>
+          <div style="flex:1; text-align:center; border-right:1px solid #F2F3F6;"><div style="font-family:'JetBrains Mono'; font-weight:800; font-size:18px; color:#15161A;">0</div><div style="font-size:11px; color:#9499A3;">Reseñas</div></div>
+          <div style="flex:1; text-align:center;"><div style="font-family:'JetBrains Mono'; font-weight:800; font-size:18px; color:#15161A;">0</div><div style="font-size:11px; color:#9499A3;">Publicaciones</div></div>
+        </div>
+      </div>
+      <div style="padding:16px 18px 0; display:flex; gap:22px; border-bottom:1px solid #EEEFF2; margin:0 18px;">
+        <div style="padding-bottom:12px; font-weight:800; font-size:14px; color:#0E28D6; border-bottom:2.5px solid #0E28D6;">Publicaciones</div>
+        <div style="padding-bottom:12px; font-weight:600; font-size:14px; color:#A2A6B0;">Reseñas</div>
+      </div>
+      <div style="flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:0 30px; text-align:center;">
+        <div style="width:60px;height:60px;border-radius:18px;background:#EEF0FE;display:flex;align-items:center;justify-content:center;margin-bottom:14px;"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0E28D6" stroke-width="1.8"><path d="M21 8 12 3 3 8l9 5 9-5Z"/><path d="M3 8v8l9 5 9-5V8"/><path d="m12 13v8"/></svg></div>
+        <div style="font-weight:800; font-size:16px; color:#15161A;">Sin publicaciones</div>
+        <div style="font-size:13px; color:#9499A3; margin-top:5px;">Este vendedor todavía no tiene publicaciones activas.</div>
+      </div>
+    </div>
+    <div class="tab">
+      <div class="ti"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#A7ABB6" stroke-width="2"><path d="m3 10 9-7 9 7v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Inicio</div>
+      <div class="ti"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#A7ABB6" stroke-width="2"><path d="m14 13-7.5 7.5a2.1 2.1 0 0 1-3-3L11 10"/><path d="m16 16 6-6"/><path d="m8 8 6-6"/><path d="m9 7 8 8"/></svg>Subastas</div>
+      <div class="ti"><div style="width:34px;height:34px;border-radius:12px;background:#0E28D6;display:flex;align-items:center;justify-content:center;margin-top:-4px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></div></div>
+      <div class="ti"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#A7ABB6" stroke-width="2"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>Avisos</div>
+      <div class="ti on"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0E28D6" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>Perfil</div>
+    </div>
+  </div>
+</div>
+
+<!-- 10 EDIT PROFILE -->
+<div class="frame" style="left:470px; top:2120px;">
+  <div class="lbl"><span>10</span> Editar perfil</div>
+  <div class="scr">
+    <div class="sb"><div>9:41</div><div class="sb-r"><svg width="17" height="11" viewBox="0 0 17 11"><rect x="0" y="6" width="3" height="5" rx="1" fill="#15161A"/><rect x="4.5" y="4" width="3" height="7" rx="1" fill="#15161A"/><rect x="9" y="2" width="3" height="9" rx="1" fill="#15161A"/><rect x="13.5" y="0" width="3" height="11" rx="1" fill="#15161A"/></svg><svg width="24" height="12" viewBox="0 0 24 12"><rect x="0.5" y="0.5" width="20" height="11" rx="3" fill="none" stroke="#15161A"/><rect x="2" y="2" width="15" height="8" rx="1.5" fill="#15161A"/><rect x="21.5" y="3.5" width="2" height="5" rx="1" fill="#15161A"/></svg></div></div>
+    <div class="body">
+      <div style="display:flex; align-items:center; justify-content:space-between; padding:8px 18px;">
+        <div style="display:flex; align-items:center; gap:8px; color:#3A3D46; font-weight:700; font-size:14px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3A3D46" stroke-width="2.2"><path d="m15 18-6-6 6-6"/></svg>Editar perfil</div>
+        <div style="font-size:13px; font-weight:800; color:#0E28D6;">Guardar</div>
+      </div>
+      <div style="flex:1; overflow:hidden; padding:14px 22px 0;">
+        <div style="display:flex; flex-direction:column; align-items:center; margin-bottom:24px;">
+          <div style="position:relative;"><div style="width:88px; height:88px; border-radius:50%; background:#EDEBFF; color:#0E28D6; font-weight:800; font-size:34px; display:flex; align-items:center; justify-content:center;">A</div><div style="position:absolute; bottom:0; right:0; width:30px; height:30px; border-radius:50%; background:#0E28D6; border:3px solid #F5F6F8; display:flex; align-items:center; justify-content:center;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3z"/><circle cx="12" cy="13" r="3.5"/></svg></div></div>
+          <div style="font-size:12px; color:#0E28D6; font-weight:700; margin-top:12px;">Cambiar avatar</div>
+        </div>
+        <div style="font-size:13px; font-weight:700; color:#3A3D46; margin-bottom:8px;">Nombre</div>
+        <div class="field" style="margin-bottom:18px; font-weight:600;">Ana Torres</div>
+        <div style="font-size:13px; font-weight:700; color:#3A3D46; margin-bottom:8px;">Email</div>
+        <div class="field" style="margin-bottom:18px; color:#9499A3; background:#F4F5F7;">ana@yala.pe</div>
+        <div style="font-size:13px; font-weight:700; color:#3A3D46; margin-bottom:8px;">URL de avatar</div>
+        <div class="field" style="color:#B4B8C0; font-family:'JetBrains Mono'; font-size:12px;">s3.amazonaws.com/avatars/42.jpg</div>
+        <div style="margin-top:24px; padding-top:18px; border-top:1px solid #ECEDF1; display:flex; align-items:center; gap:10px; color:#C8413A; font-weight:700; font-size:14px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C8413A" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="m16 17 5-5-5-5"/><path d="M21 12H9"/></svg>Cerrar sesión</div>
+      </div>
+      <div style="flex:none; padding:14px 18px; background:#fff; border-top:1px solid #F0F1F4;"><button class="btnP">Guardar cambios</button></div>
+    </div>
+  </div>
+</div>
+
+<!-- 11 CREATE LISTING -->
+<div class="frame" style="left:940px; top:2120px;">
+  <div class="lbl"><span>11</span> Vender · Nueva publicación</div>
+  <div class="scr">
+    <div class="sb"><div>9:41</div><div class="sb-r"><svg width="17" height="11" viewBox="0 0 17 11"><rect x="0" y="6" width="3" height="5" rx="1" fill="#15161A"/><rect x="4.5" y="4" width="3" height="7" rx="1" fill="#15161A"/><rect x="9" y="2" width="3" height="9" rx="1" fill="#15161A"/><rect x="13.5" y="0" width="3" height="11" rx="1" fill="#15161A"/></svg><svg width="24" height="12" viewBox="0 0 24 12"><rect x="0.5" y="0.5" width="20" height="11" rx="3" fill="none" stroke="#15161A"/><rect x="2" y="2" width="15" height="8" rx="1.5" fill="#15161A"/><rect x="21.5" y="3.5" width="2" height="5" rx="1" fill="#15161A"/></svg></div></div>
+    <div class="body">
+      <div style="display:flex; align-items:center; gap:8px; padding:8px 18px; color:#3A3D46; font-weight:700; font-size:14px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3A3D46" stroke-width="2.2"><path d="m18 6-12 12M6 6l12 12"/></svg>Nueva publicación</div>
+      <div style="flex:1; overflow:hidden; padding:8px 18px 0;">
+        <div style="display:flex; gap:8px; margin-bottom:14px;">
+          <div class="ph" style="width:72px;height:72px;border-radius:14px; border:2px dashed #C7CBD4; background:#fff; flex-direction:column; gap:4px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0E28D6" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></div>
+          <div class="ph" style="width:72px;height:72px;border-radius:14px;">1/5</div>
+        </div>
+        <div style="font-size:13px; font-weight:700; color:#3A3D46; margin-bottom:7px;">Título</div>
+        <div class="field" style="color:#B4B8C0; margin-bottom:14px;">Charizard PSA 9 — 1ª edición</div>
+        <div style="font-size:13px; font-weight:700; color:#3A3D46; margin-bottom:9px;">Modo de venta</div>
+        <div style="display:flex; gap:10px; margin-bottom:14px;">
+          <div style="flex:1; height:46px; border-radius:13px; border:1.5px solid #E4E6EC; color:#7C808B; font-weight:700; font-size:13px; display:flex; align-items:center; justify-content:center;">Precio fijo</div>
+          <div style="flex:1; height:46px; border-radius:13px; border:1.5px solid #0E28D6; background:#EEF0FE; color:#0E28D6; font-weight:800; font-size:13px; display:flex; align-items:center; justify-content:center;">Subasta</div>
+        </div>
+        <div style="display:flex; gap:10px; margin-bottom:14px;">
+          <div style="flex:1;"><div style="font-size:13px; font-weight:700; color:#3A3D46; margin-bottom:7px;">Precio inicial</div><div class="field" style="font-family:'JetBrains Mono'; color:#15161A;">S/. 100</div></div>
+          <div style="flex:1;"><div style="font-size:13px; font-weight:700; color:#3A3D46; margin-bottom:7px;">Categoría</div><div class="field" style="font-size:13px; color:#15161A;">Pokémon TCG ▾</div></div>
+        </div>
+        <div style="font-size:13px; font-weight:700; color:#3A3D46; margin-bottom:9px;">Tags</div>
+        <div style="display:flex; gap:7px; flex-wrap:wrap;">
+          <div class="pill" style="background:#EEF0FE; color:#0E28D6; padding:7px 13px; font-size:12px; font-family:'JetBrains Mono';">holo ✕</div>
+          <div class="pill" style="background:#EEF0FE; color:#0E28D6; padding:7px 13px; font-size:12px; font-family:'JetBrains Mono';">1st-edition ✕</div>
+          <div class="pill" style="background:#F1F2F5; color:#7C808B; padding:7px 13px; font-size:12px; font-family:'JetBrains Mono';">+ tag</div>
+        </div>
+      </div>
+      <div style="flex:none; padding:14px 18px; background:#fff; border-top:1px solid #F0F1F4;"><button class="btnP">Publicar</button></div>
+    </div>
+  </div>
+</div>
+</x-dc>
+</body>
+</html>
