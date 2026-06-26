@@ -13,29 +13,6 @@ funcionalidad específica van en su propio archivo o issue, no aquí.
 
 ---
 
-## 0. Repositorios, estructura y entornos
-
-El monorepo de trabajo contiene tres carpetas, cada una enlazada a su propio repositorio Git:
-
-| Carpeta        | Rol            | Repositorio |
-|----------------|----------------|-------------|
-| `frontend_yala` (o `frontend-web`) | Frontend web (React + Vite + TS) | https://github.com/Sebas-Leo/frontend_yala.git |
-| `backend`      | Backend (Spring Boot) | https://github.com/katealva/backend-yala |
-| `frontend-mobile` | Frontend mobile (React Native + Expo) | https://github.com/IsraDevop/Frontend-Mobile-Proyecto2.git |
-
-**Entornos y despliegue:**
-- **Backend desplegado en:** `https://yala.dpdns.org/api/v1/` — esta es la `baseURL` de producción
-  para web y mobile. Nunca hardcodear; va en variables de entorno (ver §2 y §11).
-- **Frontend web desplegado en AWS Amplify.**
-- **Frontend mobile** publicado vía Expo (EAS / Expo Go para demo).
-- **Workflow de CI/CD:** debe existir un workflow de GitHub Actions que **se dispare cuando haya
-  cambios en `main`** y **actualice el frontend web en AWS Amplify** automáticamente.
-
-> Cada repositorio (web, backend y mobile) tiene su **propio GitHub Project** donde se debe
-> visualizar el flujo de trabajo (issues → en progreso → en revisión → hecho).
-
----
-
 ## 1. Flujo de trabajo Git (obligatorio)
 
 - **Metodología Git Flow.** Crea **una rama por cada feature** (`feature/nombre-descriptivo`).
